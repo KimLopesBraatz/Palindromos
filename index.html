@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="palindromeApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Palindrome</title>
+
+	<script src="lib/Angular/angular.min.js"></script>
+	<link href="lib/Bootstrap/bootstrap.min.css" rel="stylesheet">
+	<script src="js/app.js"></script>
+
+</head>
+<body ng-controller="palindromeCtrl">
+<div class="container">
+	<div class="text-center">
+		<h1 title="Palíndromo é uma palavra, expressão ou frase, ou até mesmo uma sequência de letras ou números, que tenha a propriedade de ser lida e compreendida da mesma maneira, tanto da direita para a esquerda, como da esquerda para a direita.">Palindromos!!</h1>
+	</div>
+	
+	<div class="form-group col-XS-6 .col-md-4">
+
+		<label for="insiraPalindromo">Insira uma sentença e verifique se é um Palindromo!</label>
+
+		<input type="text" class="form-control input-lg" id="insiraPalindromo" placeholder="Insira um palindromo!" ng-model="string" class="input">
+	</div>	
+	<button type="submit" class="btn btn-info btn-block" ng-click="isPalindrome(string);">Verificar</button>
+	
+	<div class="text-center">
+		<h3>{{resultado}}</h2>
+	</div>
+</div>
+
+
+</body>
